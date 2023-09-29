@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!--  El siguiente código se realizo con los recursos vistos en clases. Varios fuimos estudiando 
+más profundamente para poder encontrar reemplazos al no poder utilizar tanto CSS.
+Comprendemos tanto la maquetación en HTML, como la utilización de CSS. Sabemos que si en CSS
+utilizamos ambas opciones de estilos en línea y estilos internos a la vez, puede generarse 
+un conflicto de reglas. En este caso utilizamos ambos estilos, y también la estructura de código
+quedó un poco más extensa, solo para poder entregar una página visualmente más amena. -->
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/9bf471efc5.js" crossorigin="anonymous"></script>
+        <title>RHZ&GCY</title>
+
+        <!-- Estilos internos -->
+        <style> 
+            
+            *{
+                margin:0;
+                padding:0;
+            }
+
+            body{
+                background:whitesmoke;
+                font-family: Arial, Helvetica, sans-serif;  
+            }
+
+            a{
+                text-decoration: none;
+                font-size: 20px;
+                padding:10px;
+            }
+
+            p{
+                padding:10px;
+            }
+
+            h2{
+                text-align:left;
+                padding: 10px;
+                margin:10px
+            }
+
+            h3{
+                text-align: left;
+                padding:15px;
+            }
+            h6{
+                padding:5px;
+                text-align: left;
+                color:rgb(179, 179, 179);
+            }
+
+            button{
+                background-color: #ff4800;
+                color:white;
+                border:none;
+                border-radius: 25px;
+                padding:10px;
+            }
+
+            .header{
+                background: rgb(46, 46, 46);
+                height: 75px; 
+            }
+            
+            .secc-header{
+             float:right;
+             padding:15px;
+             margin:10px;
+
+            }
+
+            .nav{
+                height: 75px;
+                color:black;
+                padding:5px;
+                text-align:center;
+                font-weight: bold;
+            }
+
+            ul{
+                padding:5px;
+            }
+
+            .main{
+                background: rgb(228, 226, 220);
+            }
+
+            .item-principal{
+                background: #f9f8f5;
+                height: 370px;
+                width: 240px;
+                color:black;
+                border-style:outset;
+                padding:15px;
+                display:inline-block;
+                text-align: center;
+            }
+
+            .art-container{
+                width:65%;
+                height: 100%;
+                text-align:center;
+                padding:30px;
+                float:left;
+            }
+            
+            .aside{
+                width:25%;
+                height: 100%;
+                padding: 35px;
+                background: rgb(223, 212, 177);    
+                float:right;   
+                text-align: center;
+            }
+
+            #item-aside{
+                padding:25px;
+            }
+           
+            .table{
+                background: aliceblue;
+                text-align:left;
+                padding:15px;
+                margin:auto;
+            }
+            
+            li{
+                padding: 5px;
+                display:inline-block;
+            }
+
+            td{
+                background:aliceblue;
+                padding:7px;
+            }
+           
+            #secc-suscribirse{
+                padding:30px;
+                text-align: center;
+                margin:5px;
+            }
+
+            .span-suscrib{
+                display: inline;
+                padding: 50px;
+                text-align: center;
+            }
+
+            #secc-mediospagos{
+                background: whitesmoke;
+                text-align: center;
+                padding:15px;
+            }
+
+            .footer{
+                background: rgb(46, 46, 46);
+                height: 70px;
+                color: aliceblue;
+                text-align: center;
+                padding: 10px;
+            }
+
+        </style>
+
+    </head>
+    
+    <!-- Cuerpo de la página -->
+    <body>
+
+        <!-- Encabezado -->
+        <header class="header">
+            
+            <span>
+                <img src="img/logo.jpg" alt="logo empresa" width="350" height="75" >
+            </span>
+            
+            <span class="secc-header">
+                
+                    <a href="#" style="color: aliceblue;"> Crear cuenta </a>
+                    <a href="#" style="color: aliceblue;"> <i class="fas fa-sign-in" style="color:aliceblue"></i> Ingresar </a>
+                    <a href="#" title="Usuario"><i class="fa-solid fa-user" style="color:aliceblue"></i></a> 
+                    <a href="#" title="Ir al carro"><i class="fa fa-shopping-cart" aria-hidden="true" style="color:aliceblue"></i></a>  
+                  
+            </span>
+            
+        </header>
+
+        <!-- Barra de navegación -->
+        <nav class="nav">  
+            
+                <form action="#">
+                    <input type="text" placeholder="Buscar...">
+                    <button type="submit" style="background-color: whitesmoke;"><i class="fa-solid fa-magnifying-glass" style="color: #000000;text-align:center"></i></button>
+                </form>
+            
+                <ul>
+                    <li> <a href="#"> Ofertas </a></li>
+                    <li> <a href="#"> Marcas </a> </li>
+                    <li> <a href="#"> Hombre </a> </li>
+                    <li> <a href="#"> Mujer </a> </li>
+                    <li> <a href="#"> Infantil </a> </li> 
+                </ul>
+                
+        </nav>
+
+        <!-- Parte principal del cuerpo de la página -->
+        <main class="main">
+
+            <!-- Sección donde se encuentran los articulos principales en oferta de la página -->
+            <section class="art-container">
+                
+                <h2>OFERTAS <a href="#" style="font-weight: lighter;font-size:x-small">ver todas</a></h2>
+                
+                    <!--  Articles: Contenido autónomo y de importancia de la página. -->
+                    <article class="item-principal">
+                        <h6>Zapatillas> Hombre</h6>
+                        <a href="#">
+                            <img src="img/producto1.jpg" alt="foto zapatillas" height="120" width="230">
+                            <p style="color: aliceblue;background-color:rgb(0, 132, 255);font-size:xx-small">AHORA 12</p>
+                            <p> Zapatillas Nike Air Max System Hombre </p>
+                            <p style="font-size: large;font-weight:bold"> $51.699.- </p>
+                            <p style="font-size: xx-small; color:coral"><i class="fa fa-truck" aria-hidden="true"></i> envío gratis </p>
+                        </a>
+                        <a href="#" style="color: aliceblue;background-color:#ff4800; border-radius:25px; padding:10px;font-size:small"> Agregar al carro </a>        
+                    </article>  
+            
+                    <article class="item-principal">
+                        <h6>Zapatillas> Infantil</h6>
+                        <a href="#">
+                            <img src="img/producto2.jpg" alt="foto zapatillas" height="120" width="230">
+                            <p style="color: aliceblue;background-color:orange;font-size:xx-small">MAS VENDIDO</p>
+                            <p> Zapatillas Jada Renew Adp Puma </p>
+                            <p style="font-size: large;font-weight:bold"> $24.999.- </p>
+                            <p style="font-size: xx-small; color:coral"><i class="fa fa-truck" aria-hidden="true"></i> envío gratis </p>
+                        </a>
+                        <a href="#" style="color: aliceblue;background-color:#ff4800; border-radius:25px; padding:10px;font-size:small"> Agregar al carro </a>         
+                    </article>
+            
+                    <article class="item-principal">
+                        <h6>Zapatillas> Mujer</h6>
+                        <a href="#">
+                            <img src="img/producto3.jpg" alt="foto zapatillas" height="120" width="230">
+                            <p style="color: aliceblue;background-color:orange;font-size:xx-small">MAS VENDIDO</p>
+                            <p> Zapatillas New Balance Warisg Running Mujer </p>
+                            <p style="font-size: large;font-weight:bold"> $30.690.- </p>
+                            <p style="font-size:xx-small; color:coral"><i class="fa fa-truck" aria-hidden="true"></i> envío gratis </p>
+                        </a>
+                        <a href="#" style="color: aliceblue;background-color:#ff4800; border-radius:25px; padding:10px;font-size:small"> Agregar al carro </a>    
+                    </article>            
+                 
+            </section>
+        
+            <!-- Sección de la derecha donde se encuentran los articulos recomendados de la página -->
+            <aside class="aside">
+
+                <div id="item-aside">
+
+                    <h4> Recomendados </h4>
+                    <!-- Se utilizó una tabla para organizar los articuls de aside -->
+                    <table class="table">
+                        <tbody style="font-family:'Arial Narrow';">
+                            <tr>
+                               <td>
+                                    <a href=""> Zapatillas Topper Ever $21.267.- </a><td><a href="#"><img src="img/producto4.jpg" alt="zapatillas" width="70" height="50"></a>
+                                </td>
+                            </tr>
+                            <tr>                               
+                                <td>
+                                    <a href="#"> Zapatillas Reebok Classic $40.151.- </a>
+                                </td>
+                                <td>
+                                    <a href="#"><img src="img/producto5.jpg" alt="zapatillas" width="70" height="50"></a>
+                                </td>
+                            </tr> 
+                            <tr>
+                                <td>
+                                    <a href="#"> Zapatillas Topper Capitan $16.109.- </a>
+                                </td>
+                                <td>
+                                    <a href="#"><img src="img/producto6.jpg" alt="zapatillas" width="70" height="50"></a>
+                                </td>                
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="#"> Zapatillas Fila Heating $18.192.- </a>
+                                </td>
+                                <td>
+                                    <a href="#"><img src="img/producto7.jpg" alt="zapatillas" width="70" height="50"></a> 
+                                </td>                    
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>    
+                
+                <!-- Sección de aside con las ofertas especiales -->
+                <div class="item-aside">
+                    <a href="#">
+                        <img src="img/flashsale.jpg" alt="Súper Ofertas">    
+                    </a>    
+                </div>
+
+            </aside>
+
+            <!--Sección del main con los datos para suscribirse al newsletter  -->
+            <section id="secc-suscribirse">
+
+                <h3 style="text-align: center;">ENTERATE DE LAS MEJORES OFERTAS</h3>
+                
+                <div class="span-suscrib">
+                    <h4>Suscribite a nuestro newsletter <i class="fa fa-hand-o-left" aria-hidden="true"></i></h4>
+                    <p style="font-size: smaller;color:grey">Recibí nuestro catálogo y novedades</p>
+                </div>
+
+                <div class="span-suscrib">
+                    <form action="#">
+                        <input type="email" placeholder="Tu correo electrónico...">
+                        <button type="submit"> Suscribirse </button>
+                    </form>
+                </div>
+
+            </section>
+
+            <!-- Sección donde se muestran los medios de pago -->
+            <section id="secc-mediospagos">
+                <h4>Medios de Pago <i class="fa fa-credit-card" aria-hidden="true"></i></h4>
+                <img src="img/MediosDePago.jpg" alt="Medios de Pago">
+            </section>
+
+        </main> 
+
+        <!-- Pie del cuerpo de la página -->
+        <footer class="footer">
+            <a href="https://www.facebook.com" class="social-icon"> <i class="fa fa-facebook" style="color: aliceblue;"></i></a>
+            <a href="https://www.twitter.com" class="social-icon"> <i class="fa fa-twitter" style="color: aliceblue;"></i></a>
+            <a href="https//rss.com" class="social-icon"> <i class="fa fa-rss" style="color: aliceblue;"></i></a>
+            <a href="https://www.youtube.com" class="social-icon"> <i class="fa fa-youtube" style="color: aliceblue;"></i></a>
+            <a href="https://www.google.com" class="social-icon"> <i class="fa fa-google-plus" style="color: aliceblue;"></i></a>
+            <p>©2023 - GRUPO 20: Gisela C. Yede, Rodrigo H. Zamora</p>
+        </footer>
+
+    </body>
+
+</html>
+
